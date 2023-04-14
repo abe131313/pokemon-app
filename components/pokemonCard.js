@@ -7,13 +7,29 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import axios from "axios";
-import { useState } from "react";
+import { useContext } from "react";
+import { BrowserRouter as Router, useNavigate } from "react-router-dom";
+import { pokemonDetailContext } from "../pages/_app.js";
+import { useRouter } from 'next/router'
+
 // import '../styles/card.css';
 
-export default function MediaCard({ name, image, number, types }) {
-  let [response, setResponse] = useState(undefined);
+export default function MediaCard({ item, name, image, number, types }) {
+  const router = useRouter();
+  const { selectedPokemon, setSelectedPokemon } =
+    useContext(pokemonDetailContext);
+  const handleClick = (specificItem) => {
+    setSelectedPokemon(specificItem);
+  };
   return (
-    <Card sx={{maxWidth:"15rem"}} className="hover-card">
+    <Card
+      sx={{ maxWidth: "15rem" }}
+      className="hover-card"
+      onClick={() => {
+        handleClick(item);
+        router.push('/pokemonDetail')
+      }}
+    >
       <CardMedia
         component="img"
         style={{ height: 140, objectFit: "contain" }}
