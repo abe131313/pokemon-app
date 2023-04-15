@@ -121,7 +121,7 @@ export default function PokemonDetailPage() {
                             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                           >
                             <Grid item xs={6}>
-                              <Typography variant="h5">
+                              <Typography variant="h5" backgroundColor="#917FB3" borderRadius={2} padding={1}>
                                 Height:{" "}
                                 {parseFloat(
                                   selectedPokemon.height.maximum
@@ -129,7 +129,7 @@ export default function PokemonDetailPage() {
                               </Typography>
                             </Grid>
                             <Grid item xs={6}>
-                              <Typography variant="h5">
+                              <Typography variant="h5" backgroundColor="#A9907E" borderRadius={2} padding={1}>
                                 Weight:
                                 {parseFloat(
                                   selectedPokemon.weight.maximum
@@ -137,17 +137,17 @@ export default function PokemonDetailPage() {
                               </Typography>
                             </Grid>
                             <Grid item xs={6}>
-                              <Typography variant="h5">
+                              <Typography variant="h5" backgroundColor="#C7E9B0" borderRadius={2} padding={1}>
                                 Category:{selectedPokemon.classification}
                               </Typography>
                             </Grid>
                             <Grid item xs={6}>
-                              <Typography variant="h5">
+                              <Typography variant="h5" backgroundColor="#F9D949" borderRadius={2} padding={1}>
                                 Resistant:{...resistancesArr}
                               </Typography>
                             </Grid>
                             <Grid item xs={6}>
-                              <Typography variant="h5">
+                              <Typography variant="h5" backgroundColor="#F45050" borderRadius={2} padding={1}s>
                                 Weaknesses:{...weaknessArr}
                               </Typography>
                             </Grid>
@@ -163,7 +163,7 @@ export default function PokemonDetailPage() {
                       Query Evoltuion Data
                     </Button> */}
                   <div>
-                    <Button variant="outlined" onClick={handleClickOpen}>
+                    <Button variant="outlined" onClick={handleClickOpen} sx={{marginBottom:1}}>
                       Evolution Data
                     </Button>
                     <Dialog
