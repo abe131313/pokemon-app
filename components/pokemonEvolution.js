@@ -33,6 +33,7 @@ function PokemonEvolution({ data }) {
                         let colorArray = ["#F45050", "#F9D949"];
                         return (
                           <Box
+                            key={i}
                             bgcolor={colorArray[i]}
                             borderRadius="5px"
                             minWidth="max-content"

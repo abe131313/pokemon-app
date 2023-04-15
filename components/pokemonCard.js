@@ -76,6 +76,7 @@ export default function MediaCard({ item, name, image, number, types }) {
                 flexDirection="row"
                 justifyContent="center"
                 borderRadius="5px"
+                key={i}
               >
                 <Typography variant="h6">{e}</Typography>
               </Box>
